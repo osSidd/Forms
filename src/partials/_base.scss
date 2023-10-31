@@ -1,0 +1,35 @@
+$font-stack: Arial;
+$primary-color: #434334;
+$border-color:#ccc;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-stack;
+    color:$primary-color;
+}
+
+@mixin border($borderColor: $border-color){
+    border: 1px solid $borderColor;
+}
+
+button{
+    background-color: #fff;
+    @include border($borderColor: teal);
+    font-size: 1rem;
+    font-weight: 500;
+    color:teal;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition:all 0.25s linear;
+    &:hover{
+        background-color: teal;
+        color:white;
+    }
+}
+
+
+

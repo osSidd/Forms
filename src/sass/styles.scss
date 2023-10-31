@@ -1,0 +1,63 @@
+@import '../partials/base';
+form{
+    width:500px;
+    margin:auto;
+    border:1px solid $border-color;
+    border-radius: 1em;
+    padding:1em;
+
+    input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select{
+        width: 100%;
+        padding:12px 8px;
+        border-radius: 8px;
+        @include border;
+        outline:none;
+
+    }
+}
+
+fieldset{
+    @include border;
+    border-radius: 8px;
+
+    ul{
+        list-style-type: none;
+        padding:0;
+        margin:0;
+    }
+}
+
+p{
+    label{
+        display:block;
+        margin-bottom: 8px;
+    }
+}
+
+h1{
+    color:#379;
+    font-weight:900;
+
+}
+
+section{
+    margin-top: 2.5rem;
+}
+
+section:last-child{
+    p:last-child{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button+button{
+            @include border(crimson);
+            color:crimson;
+            &:hover{
+                color:white;
+                background-color: crimson;
+            }
+        }
+    }
+}
+
